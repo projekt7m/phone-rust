@@ -1,8 +1,11 @@
 [package]
 name = "p7m-phone"
+description = "Rust bindings for the telephone and queue services API of P7M"
 version = "0.3.2"
 authors = ["OpenAPI Generator team and contributors"]
 edition = "2018"
+license = "Apache-2.0"
+repository = "https://github.com/projekt7m/phone-rust"
 
 [dependencies]
 serde = "^1.0"
