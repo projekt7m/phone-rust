@@ -1,8 +1,10 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 Cargo.toml
 README.md
+docs/AlarmCall.md
+docs/AlarmCallData.md
+docs/AlarmCallUpdate.md
 docs/AnnounceSwitchtime.md
 docs/Block.md
 docs/BlockApi.md
@@ -10,6 +12,7 @@ docs/CallApi.md
 docs/CodeCallRequest.md
 docs/CodeCallResult.md
 docs/InternalApi.md
+docs/NewAlarmCall.md
 docs/NewBlock.md
 docs/Queue.md
 docs/QueueApi.md
@@ -26,11 +29,15 @@ src/apis/mod.rs
 src/apis/queue_api.rs
 src/apis/status_api.rs
 src/lib.rs
+src/models/alarm_call.rs
+src/models/alarm_call_data.rs
+src/models/alarm_call_update.rs
 src/models/announce_switchtime.rs
 src/models/block.rs
 src/models/code_call_request.rs
 src/models/code_call_result.rs
 src/models/mod.rs
+src/models/new_alarm_call.rs
 src/models/new_block.rs
 src/models/queue.rs
 src/models/queue_call.rs

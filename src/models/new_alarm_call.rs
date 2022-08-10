@@ -12,15 +12,30 @@
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
-pub struct TriggerResult {
-    #[serde(rename = "success")]
-    pub success: bool,
+pub struct NewAlarmCall {
+    #[serde(rename = "alarmId")]
+    pub alarm_id: String,
+    #[serde(rename = "callee")]
+    pub callee: String,
+    #[serde(rename = "callText")]
+    pub call_text: String,
+    #[serde(rename = "callbackText")]
+    pub callback_text: String,
+    #[serde(rename = "callAcceptedDigits")]
+    pub call_accepted_digits: String,
+    #[serde(rename = "callbackAcceptedDigits")]
+    pub callback_accepted_digits: String,
 }
 
-impl TriggerResult {
-    pub fn new(success: bool) -> TriggerResult {
-        TriggerResult {
-            success,
+impl NewAlarmCall {
+    pub fn new(alarm_id: String, callee: String, call_text: String, callback_text: String, call_accepted_digits: String, callback_accepted_digits: String) -> NewAlarmCall {
+        NewAlarmCall {
+            alarm_id,
+            callee,
+            call_text,
+            callback_text,
+            call_accepted_digits,
+            callback_accepted_digits,
         }
     }
 }

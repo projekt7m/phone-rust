@@ -12,15 +12,15 @@
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
-pub struct TriggerResult {
-    #[serde(rename = "success")]
-    pub success: bool,
+pub struct AlarmCallData {
+    #[serde(rename = "data")]
+    pub data: Vec<crate::models::AlarmCall>,
 }
 
-impl TriggerResult {
-    pub fn new(success: bool) -> TriggerResult {
-        TriggerResult {
-            success,
+impl AlarmCallData {
+    pub fn new(data: Vec<crate::models::AlarmCall>) -> AlarmCallData {
+        AlarmCallData {
+            data,
         }
     }
 }
