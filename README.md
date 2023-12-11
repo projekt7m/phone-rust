@@ -38,12 +38,15 @@ All URIs are relative to *https://yser.p7m.de/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AudioSnippetApi* | [**audio_snippet_get**](docs/AudioSnippetApi.md#audio_snippet_get) | **GET** /audio/snippet | 
+*AudioSnippetApi* | [**audio_snippet_post**](docs/AudioSnippetApi.md#audio_snippet_post) | **POST** /audio/snippet | 
 *BlockApi* | [**block_get**](docs/BlockApi.md#block_get) | **GET** /block | 
 *BlockApi* | [**block_id_delete**](docs/BlockApi.md#block_id_delete) | **DELETE** /block/{id} | 
 *BlockApi* | [**block_id_get**](docs/BlockApi.md#block_id_get) | **GET** /block/{id} | 
 *BlockApi* | [**block_id_put**](docs/BlockApi.md#block_id_put) | **PUT** /block/{id} | 
 *BlockApi* | [**block_post**](docs/BlockApi.md#block_post) | **POST** /block | 
 *CallApi* | [**call_alarm_all_of_id_delete**](docs/CallApi.md#call_alarm_all_of_id_delete) | **DELETE** /call/alarm/all-of/{id} | 
+*CallApi* | [**call_alarm_by_callee_e164_get**](docs/CallApi.md#call_alarm_by_callee_e164_get) | **GET** /call/alarm/by-callee/{e164} | 
 *CallApi* | [**call_alarm_get**](docs/CallApi.md#call_alarm_get) | **GET** /call/alarm | 
 *CallApi* | [**call_alarm_id_delete**](docs/CallApi.md#call_alarm_id_delete) | **DELETE** /call/alarm/{id} | 
 *CallApi* | [**call_alarm_id_get**](docs/CallApi.md#call_alarm_id_get) | **GET** /call/alarm/{id} | 
@@ -62,10 +65,13 @@ Class | Method | HTTP request | Description
  - [AlarmCallData](docs/AlarmCallData.md)
  - [AlarmCallUpdate](docs/AlarmCallUpdate.md)
  - [AnnounceSwitchtime](docs/AnnounceSwitchtime.md)
+ - [AudioSnippet](docs/AudioSnippet.md)
+ - [AudioSnippetData](docs/AudioSnippetData.md)
  - [Block](docs/Block.md)
  - [CodeCallRequest](docs/CodeCallRequest.md)
  - [CodeCallResult](docs/CodeCallResult.md)
  - [NewAlarmCall](docs/NewAlarmCall.md)
+ - [NewAudioSnippet](docs/NewAudioSnippet.md)
  - [NewBlock](docs/NewBlock.md)
  - [Queue](docs/Queue.md)
  - [QueueCall](docs/QueueCall.md)

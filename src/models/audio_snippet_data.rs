@@ -12,24 +12,15 @@
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
-pub struct NewBlock {
-    #[serde(rename = "queue_id")]
-    pub queue_id: String,
-    #[serde(rename = "start_time")]
-    pub start_time: String,
-    #[serde(rename = "end_time")]
-    pub end_time: String,
-    #[serde(rename = "announce")]
-    pub announce: String,
+pub struct AudioSnippetData {
+    #[serde(rename = "data")]
+    pub data: Vec<crate::models::AudioSnippet>,
 }
 
-impl NewBlock {
-    pub fn new(queue_id: String, start_time: String, end_time: String, announce: String) -> NewBlock {
-        NewBlock {
-            queue_id,
-            start_time,
-            end_time,
-            announce,
+impl AudioSnippetData {
+    pub fn new(data: Vec<crate::models::AudioSnippet>) -> AudioSnippetData {
+        AudioSnippetData {
+            data,
         }
     }
 }

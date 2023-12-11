@@ -165,7 +165,7 @@ pub async fn block_id_get(configuration: &configuration::Configuration, id: &str
 }
 
 /// Update the specified block
-pub async fn block_id_put(configuration: &configuration::Configuration, id: &str, block: crate::models::Block) -> Result<crate::models::Block, Error<BlockIdPutError>> {
+pub async fn block_id_put(configuration: &configuration::Configuration, id: &str, new_block: crate::models::NewBlock) -> Result<crate::models::Block, Error<BlockIdPutError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -184,7 +184,7 @@ pub async fn block_id_put(configuration: &configuration::Configuration, id: &str
         };
         local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
     };
-    local_var_req_builder = local_var_req_builder.json(&block);
+    local_var_req_builder = local_var_req_builder.json(&new_block);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;

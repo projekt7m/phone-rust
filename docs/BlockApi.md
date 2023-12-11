@@ -101,7 +101,7 @@ Name | Type | Description  | Required | Notes
 
 ## block_id_put
 
-> crate::models::Block block_id_put(id, block)
+> crate::models::Block block_id_put(id, new_block)
 
 
 Update the specified block
@@ -112,7 +112,7 @@ Update the specified block
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **id** | **String** | block id | [required] |
-**block** | [**Block**](Block.md) | the updated block | [required] |
+**new_block** | [**NewBlock**](NewBlock.md) | the updated block | [required] |
 
 ### Return type
 

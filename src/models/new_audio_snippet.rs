@@ -12,24 +12,18 @@
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
-pub struct NewBlock {
-    #[serde(rename = "queue_id")]
-    pub queue_id: String,
-    #[serde(rename = "start_time")]
-    pub start_time: String,
-    #[serde(rename = "end_time")]
-    pub end_time: String,
-    #[serde(rename = "announce")]
-    pub announce: String,
+pub struct NewAudioSnippet {
+    #[serde(rename = "text", skip_serializing_if = "Option::is_none")]
+    pub text: Option<String>,
+    #[serde(rename = "recordingRequested", skip_serializing_if = "Option::is_none")]
+    pub recording_requested: Option<bool>,
 }
 
-impl NewBlock {
-    pub fn new(queue_id: String, start_time: String, end_time: String, announce: String) -> NewBlock {
-        NewBlock {
-            queue_id,
-            start_time,
-            end_time,
-            announce,
+impl NewAudioSnippet {
+    pub fn new() -> NewAudioSnippet {
+        NewAudioSnippet {
+            text: None,
+            recording_requested: None,
         }
     }
 }

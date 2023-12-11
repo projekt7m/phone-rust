@@ -23,6 +23,14 @@ pub enum CallAlarmAllOfIdDeleteError {
     UnknownValue(serde_json::Value),
 }
 
+/// struct for typed errors of method [`call_alarm_by_callee_e164_get`]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum CallAlarmByCalleeE164GetError {
+    Status401(),
+    UnknownValue(serde_json::Value),
+}
+
 /// struct for typed errors of method [`call_alarm_get`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
@@ -75,7 +83,7 @@ pub enum CallCodePostError {
 }
 
 
-/// Canceles all alarm calls of an alarm
+/// Cancels all alarm calls of an alarm
 pub async fn call_alarm_all_of_id_delete(configuration: &configuration::Configuration, id: &str) -> Result<(), Error<CallAlarmAllOfIdDeleteError>> {
     let local_var_configuration = configuration;
 
@@ -106,6 +114,42 @@ pub async fn call_alarm_all_of_id_delete(configuration: &configuration::Configur
         Ok(())
     } else {
         let local_var_entity: Option<CallAlarmAllOfIdDeleteError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Get all alarm calls for the presented callee  When called by a user of UserType System this may return results from different tenants. 
+pub async fn call_alarm_by_callee_e164_get(configuration: &configuration::Configuration, e164: &str) -> Result<crate::models::AlarmCallData, Error<CallAlarmByCalleeE164GetError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/call/alarm/by-callee/{e164}", local_var_configuration.base_path, e164=crate::apis::urlencode(e164));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<CallAlarmByCalleeE164GetError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }

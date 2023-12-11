@@ -5,6 +5,7 @@ All URIs are relative to *https://yser.p7m.de/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**call_alarm_all_of_id_delete**](CallApi.md#call_alarm_all_of_id_delete) | **DELETE** /call/alarm/all-of/{id} | 
+[**call_alarm_by_callee_e164_get**](CallApi.md#call_alarm_by_callee_e164_get) | **GET** /call/alarm/by-callee/{e164} | 
 [**call_alarm_get**](CallApi.md#call_alarm_get) | **GET** /call/alarm | 
 [**call_alarm_id_delete**](CallApi.md#call_alarm_id_delete) | **DELETE** /call/alarm/{id} | 
 [**call_alarm_id_get**](CallApi.md#call_alarm_id_get) | **GET** /call/alarm/{id} | 
@@ -19,7 +20,7 @@ Method | HTTP request | Description
 > call_alarm_all_of_id_delete(id)
 
 
-Canceles all alarm calls of an alarm
+Cancels all alarm calls of an alarm
 
 ### Parameters
 
@@ -40,6 +41,36 @@ Name | Type | Description  | Required | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## call_alarm_by_callee_e164_get
+
+> crate::models::AlarmCallData call_alarm_by_callee_e164_get(e164)
+
+
+Get all alarm calls for the presented callee  When called by a user of UserType System this may return results from different tenants. 
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**e164** | **String** | phone number of the person being called by the alarm | [required] |
+
+### Return type
+
+[**crate::models::AlarmCallData**](AlarmCallData.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

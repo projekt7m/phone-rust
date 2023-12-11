@@ -84,6 +84,8 @@ pub enum CallState {
     CALLBACKENDED,
     #[serde(rename = "CANCELED")]
     CANCELED,
+    #[serde(rename = "DUMMY")]
+    DUMMY,
 }
 
 impl Default for CallState {
