@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **tenant_id** | **String** |  | 
 **alarm_id** | **String** |  | 
 **callee** | **String** |  | 
-**call_state** | **String** |  | 
+**call_state** | [**crate::models::AlarmCallState**](AlarmCallState.md) |  | 
 **call_text** | **String** |  | 
 **call_text_id** | **String** |  | 
 **callback_text** | **String** |  | 

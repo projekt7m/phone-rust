@@ -12,18 +12,15 @@
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
-pub struct CodeCallRequest {
-    #[serde(rename = "code")]
-    pub code: String,
-    #[serde(rename = "phone")]
-    pub phone: String,
+pub struct QueueOpeningData {
+    #[serde(rename = "data")]
+    pub data: Vec<crate::models::QueueOpening>,
 }
 
-impl CodeCallRequest {
-    pub fn new(code: String, phone: String) -> CodeCallRequest {
-        CodeCallRequest {
-            code,
-            phone,
+impl QueueOpeningData {
+    pub fn new(data: Vec<crate::models::QueueOpening>) -> QueueOpeningData {
+        QueueOpeningData {
+            data,
         }
     }
 }

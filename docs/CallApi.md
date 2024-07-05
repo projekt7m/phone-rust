@@ -4,83 +4,20 @@ All URIs are relative to *https://yser.p7m.de/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**call_alarm_all_of_id_delete**](CallApi.md#call_alarm_all_of_id_delete) | **DELETE** /call/alarm/all-of/{id} | 
-[**call_alarm_by_callee_e164_get**](CallApi.md#call_alarm_by_callee_e164_get) | **GET** /call/alarm/by-callee/{e164} | 
-[**call_alarm_get**](CallApi.md#call_alarm_get) | **GET** /call/alarm | 
-[**call_alarm_id_delete**](CallApi.md#call_alarm_id_delete) | **DELETE** /call/alarm/{id} | 
-[**call_alarm_id_get**](CallApi.md#call_alarm_id_get) | **GET** /call/alarm/{id} | 
-[**call_alarm_id_put**](CallApi.md#call_alarm_id_put) | **PUT** /call/alarm/{id} | 
-[**call_alarm_post**](CallApi.md#call_alarm_post) | **POST** /call/alarm | 
-[**call_code_post**](CallApi.md#call_code_post) | **POST** /call/code | 
+[**get_call_alarm**](CallApi.md#get_call_alarm) | **GET** /call/alarm | Get the list of all alarm calls
+[**get_call_alarm_by_callee_e164_unsecure**](CallApi.md#get_call_alarm_by_callee_e164_unsecure) | **GET** /call/alarm/by-callee/{e164} | Get the alarm calls for a given telephone number
+[**post_call_alarm**](CallApi.md#post_call_alarm) | **POST** /call/alarm | Create a new alarm call
+[**post_call_code**](CallApi.md#post_call_code) | **POST** /call/code | RPC to trigger an outgoing call to send a PIN code to a user
+[**put_call_alarm_id**](CallApi.md#put_call_alarm_id) | **PUT** /call/alarm/{id} | Update the state of an existing alarm call
 
 
 
-## call_alarm_all_of_id_delete
+## get_call_alarm
 
-> call_alarm_all_of_id_delete(id)
+> crate::models::AlarmCallData get_call_alarm()
+Get the list of all alarm calls
 
-
-Cancels all alarm calls of an alarm
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**id** | **String** | alarm id | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_alarm_by_callee_e164_get
-
-> crate::models::AlarmCallData call_alarm_by_callee_e164_get(e164)
-
-
-Get all alarm calls for the presented callee  When called by a user of UserType System this may return results from different tenants. 
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**e164** | **String** | phone number of the person being called by the alarm | [required] |
-
-### Return type
-
-[**crate::models::AlarmCallData**](AlarmCallData.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_alarm_get
-
-> crate::models::AlarmCallData call_alarm_get()
-
-
-Get the list of alarm calls
+Get the list of all alarm calls
 
 ### Parameters
 
@@ -92,7 +29,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
@@ -102,57 +39,27 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_alarm_id_delete
+## get_call_alarm_by_callee_e164_unsecure
 
-> call_alarm_id_delete(id)
+> crate::models::AlarmCallData get_call_alarm_by_callee_e164_unsecure(e164)
+Get the alarm calls for a given telephone number
 
-
-Cancel a single alarm call
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**id** | **String** | alarm call id | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_alarm_id_get
-
-> crate::models::AlarmCall call_alarm_id_get(id)
-
-
-Returns the given alarm call
+Get the alarm calls for a given telephone number
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**id** | **String** | alarm call id | [required] |
+**e164** | **String** | Telephone number in E.164 format | [required] |
 
 ### Return type
 
-[**crate::models::AlarmCall**](AlarmCall.md)
+[**crate::models::AlarmCallData**](AlarmCallData.md)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
@@ -162,20 +69,19 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_alarm_id_put
+## post_call_alarm
 
-> crate::models::AlarmCall call_alarm_id_put(id, alarm_call_update)
+> crate::models::AlarmCall post_call_alarm(new_alarm_call)
+Create a new alarm call
 
-
-Updates the state of an alarm call
+Create a new alarm call
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**id** | **String** | alarm call id | [required] |
-**alarm_call_update** | [**AlarmCallUpdate**](AlarmCallUpdate.md) | the alarm call update | [required] |
+**new_alarm_call** | [**NewAlarmCall**](NewAlarmCall.md) | The alarm call to be created | [required] |
 
 ### Return type
 
@@ -183,7 +89,7 @@ Name | Type | Description  | Required | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
@@ -193,49 +99,19 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_alarm_post
+## post_call_code
 
-> crate::models::AlarmCall call_alarm_post(new_alarm_call)
+> crate::models::CodeCallResult post_call_code(code_call_request)
+RPC to trigger an outgoing call to send a PIN code to a user
 
-
-creates a new alarm call
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**new_alarm_call** | [**NewAlarmCall**](NewAlarmCall.md) | the alarm call to be created | [required] |
-
-### Return type
-
-[**crate::models::AlarmCall**](AlarmCall.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_code_post
-
-> crate::models::CodeCallResult call_code_post(code_call_request)
-
-
-This is a RPC call used to trigger an outgoing call to send a PIN code to a user
+RPC to trigger an outgoing call to send a PIN code to a user
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**code_call_request** | Option<[**CodeCallRequest**](CodeCallRequest.md)> | Parameters to define the call the should be made |  |
+**code_call_request** | [**CodeCallRequest**](CodeCallRequest.md) | Parameters to define the call that should be made | [required] |
 
 ### Return type
 
@@ -243,7 +119,38 @@ Name | Type | Description  | Required | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## put_call_alarm_id
+
+> crate::models::AlarmCall put_call_alarm_id(id, alarm_call_update)
+Update the state of an existing alarm call
+
+Update the state of an existing alarm call
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**id** | **String** | ID of the alarm call | [required] |
+**alarm_call_update** | [**AlarmCallUpdate**](AlarmCallUpdate.md) | The status update to the alarm call | [required] |
+
+### Return type
+
+[**crate::models::AlarmCall**](AlarmCall.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 

@@ -12,24 +12,21 @@
 
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
-pub struct NewBlock {
-    #[serde(rename = "queue_id")]
-    pub queue_id: String,
-    #[serde(rename = "start_time")]
+pub struct NewQueueOpening {
+    #[serde(rename = "weekday")]
+    pub weekday: crate::models::WeekdayHoliday,
+    #[serde(rename = "startTime")]
     pub start_time: String,
-    #[serde(rename = "end_time")]
+    #[serde(rename = "endTime")]
     pub end_time: String,
-    #[serde(rename = "announce")]
-    pub announce: String,
 }
 
-impl NewBlock {
-    pub fn new(queue_id: String, start_time: String, end_time: String, announce: String) -> NewBlock {
-        NewBlock {
-            queue_id,
+impl NewQueueOpening {
+    pub fn new(weekday: crate::models::WeekdayHoliday, start_time: String, end_time: String) -> NewQueueOpening {
+        NewQueueOpening {
+            weekday,
             start_time,
             end_time,
-            announce,
         }
     }
 }

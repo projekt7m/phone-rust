@@ -4,16 +4,16 @@ All URIs are relative to *https://yser.p7m.de/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**block_check_pending_get**](InternalApi.md#block_check_pending_get) | **GET** /block/check_pending | 
+[**check_pending_blocks**](InternalApi.md#check_pending_blocks) | **GET** /block/check_pending | Internal call: check for blocks that are pending and have to be started/stopped
 
 
 
-## block_check_pending_get
+## check_pending_blocks
 
-> String block_check_pending_get()
+> String check_pending_blocks()
+Internal call: check for blocks that are pending and have to be started/stopped
 
-
-This is used internally only and provides no externally usable service
+Internal call: check for blocks that are pending and have to be started/stopped
 
 ### Parameters
 
@@ -30,7 +30,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

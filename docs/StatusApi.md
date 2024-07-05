@@ -4,23 +4,23 @@ All URIs are relative to *https://yser.p7m.de/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**status_queue_get**](StatusApi.md#status_queue_get) | **GET** /status/{queue} | 
+[**status**](StatusApi.md#status) | **GET** /status/{queue} | Get the current calls present in a queue
 
 
 
-## status_queue_get
+## status
 
-> Vec<crate::models::QueueCall> status_queue_get(queue)
+> Vec<crate::models::QueueCall> status(queue)
+Get the current calls present in a queue
 
-
-Request the current state of a waiting queue
+Get the current calls present in a queue
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**queue** | **String** | queue token to get the status for (caution: no UUID here) | [required] |
+**queue** | **String** | Queue token to get the status for (caution: **no UUID** here) | [required] |
 
 ### Return type
 
@@ -28,7 +28,7 @@ Name | Type | Description  | Required | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[oauth](../README.md#oauth)
 
 ### HTTP request headers
 
