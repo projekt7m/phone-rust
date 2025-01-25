@@ -1,6 +1,6 @@
 [package]
 name = "p7m-phone"
-version = "0.5.1"
+version = "0.5.2"
 authors = ["tech@p7m.de"]
 description = "API for managing phone services  This is the API of the service at P7M that manages phone services.  **Attention:** this API will probably still change a lot in the future, it's not at all stable yet"
 license = "Apache-2.0"
@@ -14,4 +14,4 @@ serde_json = "^1.0"
 serde_repr = "^0.1"
 url = "^2.5"
 uuid = { version = "^1.8", features = ["serde", "v4"] }
-reqwest = { version = "^0.12", features = ["json", "multipart"] }
+reqwest = { version = "^0.12", default-features = false, features = ["json", "multipart", "rustls-tls"] }
