@@ -24,7 +24,7 @@ Delete a block by its ID
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**id** | **String** | ID of the block | [required] |
+**id** | **uuid::Uuid** | ID of the block | [required] |
 
 ### Return type
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_block_by_id
 
-> crate::models::Block get_block_by_id(id)
+> models::Block get_block_by_id(id)
 Get a single block by its ID
 
 Get a single block by its ID
@@ -54,11 +54,11 @@ Get a single block by its ID
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**id** | **String** | ID of the block | [required] |
+**id** | **uuid::Uuid** | ID of the block | [required] |
 
 ### Return type
 
-[**crate::models::Block**](Block.md)
+[**models::Block**](Block.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Required | Notes
 
 ## get_blocks
 
-> Vec<crate::models::Block> get_blocks()
+> Vec<models::Block> get_blocks()
 Get the list of all waiting queue blocks
 
 Get the list of all waiting queue blocks
@@ -85,7 +85,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Vec<crate::models::Block>**](Block.md)
+[**Vec<models::Block>**](Block.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ This endpoint does not need any parameter.
 
 ## post_block
 
-> crate::models::Block post_block(new_block)
+> models::Block post_block(new_block)
 Create a new block for a waiting queue
 
 Create a new block for a waiting queue  The value given for `announce` defines the announcement played to the caller. For the values `orga` (please call again later) and `today` (please call again tomorrow) there are prepared audio files on the server.  The files `startTime` and `endTime` are values for which starting and ending the block has been planned/configured. While the system fills in the fields `started` (on yser)/`started2` (on volp) and `ended` (on yser)/`ended2` (on volp) automatically when it starts and ends the block on the VoIP servers. Therefore, when creating a new block, the `started`, `started2`, `ended`, and `ended2` fields should be left empty, because the server will not process the events if there is already something in this field.
@@ -115,7 +115,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::Block**](Block.md)
+[**models::Block**](Block.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Required | Notes
 
 ## put_block_by_id
 
-> crate::models::Block put_block_by_id(id, new_block)
+> models::Block put_block_by_id(id, new_block)
 Update an existing block
 
 Update an existing block
@@ -141,12 +141,12 @@ Update an existing block
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**id** | **String** | ID of the block | [required] |
+**id** | **uuid::Uuid** | ID of the block | [required] |
 **new_block** | [**NewBlock**](NewBlock.md) | The updated block | [required] |
 
 ### Return type
 
-[**crate::models::Block**](Block.md)
+[**models::Block**](Block.md)
 
 ### Authorization
 

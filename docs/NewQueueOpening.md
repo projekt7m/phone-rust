@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**weekday** | [**crate::models::WeekdayHoliday**](WeekdayHoliday.md) |  | 
+**weekday** | [**models::WeekdayHoliday**](WeekdayHoliday.md) |  | 
 **start_time** | **String** |  | 
 **end_time** | **String** |  | 
 

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**queue_opening_id** | **String** |  | 
-**tenant_id** | **String** |  | 
-**queue_id** | **String** |  | 
-**weekday** | [**crate::models::WeekdayHoliday**](WeekdayHoliday.md) |  | 
+**queue_opening_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
+**tenant_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
+**queue_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
+**weekday** | [**models::WeekdayHoliday**](WeekdayHoliday.md) |  | 
 **start_time** | **String** |  | 
 **end_time** | **String** |  | 
 

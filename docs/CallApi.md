@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## get_call_alarm
 
-> crate::models::AlarmCallData get_call_alarm()
+> models::AlarmCallData get_call_alarm()
 Get the list of all alarm calls
 
 Get the list of all alarm calls
@@ -25,7 +25,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**crate::models::AlarmCallData**](AlarmCallData.md)
+[**models::AlarmCallData**](AlarmCallData.md)
 
 ### Authorization
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ## get_call_alarm_by_callee_e164_unsecure
 
-> crate::models::AlarmCallData get_call_alarm_by_callee_e164_unsecure(e164)
+> models::AlarmCallData get_call_alarm_by_callee_e164_unsecure(e164)
 Get the alarm calls for a given telephone number
 
 Get the alarm calls for a given telephone number
@@ -55,7 +55,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AlarmCallData**](AlarmCallData.md)
+[**models::AlarmCallData**](AlarmCallData.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Required | Notes
 
 ## post_call_alarm
 
-> crate::models::AlarmCall post_call_alarm(new_alarm_call)
+> models::AlarmCall post_call_alarm(new_alarm_call)
 Create a new alarm call
 
 Create a new alarm call
@@ -85,7 +85,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::AlarmCall**](AlarmCall.md)
+[**models::AlarmCall**](AlarmCall.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Required | Notes
 
 ## post_call_code
 
-> crate::models::CodeCallResult post_call_code(code_call_request)
+> models::CodeCallResult post_call_code(code_call_request)
 RPC to trigger an outgoing call to send a PIN code to a user
 
 RPC to trigger an outgoing call to send a PIN code to a user
@@ -115,7 +115,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::CodeCallResult**](CodeCallResult.md)
+[**models::CodeCallResult**](CodeCallResult.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Required | Notes
 
 ## put_call_alarm_id
 
-> crate::models::AlarmCall put_call_alarm_id(id, alarm_call_update)
+> models::AlarmCall put_call_alarm_id(id, alarm_call_update)
 Update the state of an existing alarm call
 
 Update the state of an existing alarm call
@@ -141,12 +141,12 @@ Update the state of an existing alarm call
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**id** | **String** | ID of the alarm call | [required] |
+**id** | **uuid::Uuid** | ID of the alarm call | [required] |
 **alarm_call_update** | [**AlarmCallUpdate**](AlarmCallUpdate.md) | The status update to the alarm call | [required] |
 
 ### Return type
 
-[**crate::models::AlarmCall**](AlarmCall.md)
+[**models::AlarmCall**](AlarmCall.md)
 
 ### Authorization
 

@@ -13,6 +13,7 @@ docs/CallState.md
 docs/CodeCallRequest.md
 docs/CodeCallResult.md
 docs/InternalApi.md
+docs/LegacyQueue.md
 docs/NewAlarmCall.md
 docs/NewBlock.md
 docs/NewQueueOpening.md
@@ -21,6 +22,7 @@ docs/QueueApi.md
 docs/QueueCall.md
 docs/QueueOpening.md
 docs/QueueOpeningData.md
+docs/QueuePrio.md
 docs/StatusApi.md
 docs/WeekdayHoliday.md
 git_push.sh
@@ -40,6 +42,7 @@ src/models/block.rs
 src/models/call_state.rs
 src/models/code_call_request.rs
 src/models/code_call_result.rs
+src/models/legacy_queue.rs
 src/models/mod.rs
 src/models/new_alarm_call.rs
 src/models/new_block.rs
@@ -48,4 +51,5 @@ src/models/queue.rs
 src/models/queue_call.rs
 src/models/queue_opening.rs
 src/models/queue_opening_data.rs
+src/models/queue_prio.rs
 src/models/weekday_holiday.rs

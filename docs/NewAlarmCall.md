@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alarm_id** | **String** |  | 
+**alarm_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
 **callee** | **String** |  | 
 **call_text** | **String** |  | 
 **callback_text** | **String** |  | 

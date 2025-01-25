@@ -12,24 +12,24 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct NewBlock {
+pub struct LegacyQueue {
     #[serde(rename = "queue_id")]
     pub queue_id: uuid::Uuid,
-    #[serde(rename = "start_time")]
-    pub start_time: String,
-    #[serde(rename = "end_time")]
-    pub end_time: String,
-    #[serde(rename = "announce")]
-    pub announce: String,
+    #[serde(rename = "tenant_id")]
+    pub tenant_id: uuid::Uuid,
+    #[serde(rename = "queue")]
+    pub queue: String,
+    #[serde(rename = "name")]
+    pub name: String,
 }
 
-impl NewBlock {
-    pub fn new(queue_id: uuid::Uuid, start_time: String, end_time: String, announce: String) -> NewBlock {
-        NewBlock {
+impl LegacyQueue {
+    pub fn new(queue_id: uuid::Uuid, tenant_id: uuid::Uuid, queue: String, name: String) -> LegacyQueue {
+        LegacyQueue {
             queue_id,
-            start_time,
-            end_time,
-            announce,
+            tenant_id,
+            queue,
+            name,
         }
     }
 }

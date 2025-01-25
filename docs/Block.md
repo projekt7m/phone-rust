@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**block_id** | **String** |  | 
-**tenant_id** | **String** |  | 
-**queue_id** | **String** |  | 
+**block_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
+**tenant_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
+**queue_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
 **start_time** | **String** |  | 
 **end_time** | **String** |  | 
 **announce** | **String** |  | 

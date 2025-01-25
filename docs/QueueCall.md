@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**state** | [**crate::models::CallState**](CallState.md) |  | 
+**state** | [**models::CallState**](CallState.md) |  | 
 **caller_id_num** | Option<**String**> |  | [optional]
 **caller_id_name** | Option<**String**> |  | [optional]
 **call_time** | **String** |  | 

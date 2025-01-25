@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alarm_call_id** | **String** |  | 
-**tenant_id** | **String** |  | 
-**alarm_id** | **String** |  | 
+**alarm_call_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
+**tenant_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
+**alarm_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
 **callee** | **String** |  | 
-**call_state** | [**crate::models::AlarmCallState**](AlarmCallState.md) |  | 
+**call_state** | [**models::AlarmCallState**](AlarmCallState.md) |  | 
 **call_text** | **String** |  | 
-**call_text_id** | **String** |  | 
+**call_text_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
 **callback_text** | **String** |  | 
-**callback_text_id** | **String** |  | 
+**callback_text_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
 **call_accepted_digits** | **String** |  | 
 **callback_accepted_digits** | **String** |  | 
 **pressed_digit** | **String** |  | 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## status
 
-> Vec<crate::models::QueueCall> status(queue)
+> Vec<models::QueueCall> status(queue)
 Get the current calls present in a queue
 
 Get the current calls present in a queue
@@ -24,7 +24,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<crate::models::QueueCall>**](QueueCall.md)
+[**Vec<models::QueueCall>**](QueueCall.md)
 
 ### Authorization
 
