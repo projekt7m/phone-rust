@@ -12,21 +12,15 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct QueuePrio {
-    #[serde(rename = "prio")]
-    pub prio: i32,
-    #[serde(rename = "name")]
-    pub name: String,
-    #[serde(rename = "accessKey")]
-    pub access_key: String,
+pub struct ListWrapperQueueOpening {
+    #[serde(rename = "data")]
+    pub data: Vec<models::ListWrapperQueueOpeningDataInner>,
 }
 
-impl QueuePrio {
-    pub fn new(prio: i32, name: String, access_key: String) -> QueuePrio {
-        QueuePrio {
-            prio,
-            name,
-            access_key,
+impl ListWrapperQueueOpening {
+    pub fn new(data: Vec<models::ListWrapperQueueOpeningDataInner>) -> ListWrapperQueueOpening {
+        ListWrapperQueueOpening {
+            data,
         }
     }
 }

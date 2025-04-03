@@ -14,9 +14,7 @@ Method | HTTP request | Description
 
 ## get_call_alarm
 
-> models::AlarmCallData get_call_alarm()
-Get the list of all alarm calls
-
+> models::ListWrapperAlarmCall get_call_alarm()
 Get the list of all alarm calls
 
 ### Parameters
@@ -25,7 +23,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**models::AlarmCallData**](AlarmCallData.md)
+[**models::ListWrapperAlarmCall**](ListWrapper_AlarmCall.md)
 
 ### Authorization
 
@@ -41,9 +39,7 @@ This endpoint does not need any parameter.
 
 ## get_call_alarm_by_callee_e164_unsecure
 
-> models::AlarmCallData get_call_alarm_by_callee_e164_unsecure(e164)
-Get the alarm calls for a given telephone number
-
+> models::ListWrapperAlarmCall get_call_alarm_by_callee_e164_unsecure(e164)
 Get the alarm calls for a given telephone number
 
 ### Parameters
@@ -55,7 +51,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::AlarmCallData**](AlarmCallData.md)
+[**models::ListWrapperAlarmCall**](ListWrapper_AlarmCall.md)
 
 ### Authorization
 
@@ -72,8 +68,6 @@ Name | Type | Description  | Required | Notes
 ## post_call_alarm
 
 > models::AlarmCall post_call_alarm(new_alarm_call)
-Create a new alarm call
-
 Create a new alarm call
 
 ### Parameters
@@ -104,8 +98,6 @@ Name | Type | Description  | Required | Notes
 > models::CodeCallResult post_call_code(code_call_request)
 RPC to trigger an outgoing call to send a PIN code to a user
 
-RPC to trigger an outgoing call to send a PIN code to a user
-
 ### Parameters
 
 
@@ -132,8 +124,6 @@ Name | Type | Description  | Required | Notes
 ## put_call_alarm_id
 
 > models::AlarmCall put_call_alarm_id(id, alarm_call_update)
-Update the state of an existing alarm call
-
 Update the state of an existing alarm call
 
 ### Parameters

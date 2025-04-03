@@ -13,8 +13,6 @@ Method | HTTP request | Description
 > Vec<models::QueueCall> status(queue)
 Get the current calls present in a queue
 
-Get the current calls present in a queue
-
 ### Parameters
 
 

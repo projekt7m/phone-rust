@@ -13,8 +13,6 @@ Method | HTTP request | Description
 > String check_pending_blocks()
 Internal call: check for blocks that are pending and have to be started/stopped
 
-Internal call: check for blocks that are pending and have to be started/stopped
-
 ### Parameters
 
 This endpoint does not need any parameter.

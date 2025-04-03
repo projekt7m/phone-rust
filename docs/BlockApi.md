@@ -17,8 +17,6 @@ Method | HTTP request | Description
 > delete_block_by_id(id)
 Delete a block by its ID
 
-Delete a block by its ID
-
 ### Parameters
 
 
@@ -45,8 +43,6 @@ Name | Type | Description  | Required | Notes
 ## get_block_by_id
 
 > models::Block get_block_by_id(id)
-Get a single block by its ID
-
 Get a single block by its ID
 
 ### Parameters
@@ -77,8 +73,6 @@ Name | Type | Description  | Required | Notes
 > Vec<models::Block> get_blocks()
 Get the list of all waiting queue blocks
 
-Get the list of all waiting queue blocks
-
 ### Parameters
 
 This endpoint does not need any parameter.
@@ -104,7 +98,7 @@ This endpoint does not need any parameter.
 > models::Block post_block(new_block)
 Create a new block for a waiting queue
 
-Create a new block for a waiting queue  The value given for `announce` defines the announcement played to the caller. For the values `orga` (please call again later) and `today` (please call again tomorrow) there are prepared audio files on the server.  The files `startTime` and `endTime` are values for which starting and ending the block has been planned/configured. While the system fills in the fields `started` (on yser)/`started2` (on volp) and `ended` (on yser)/`ended2` (on volp) automatically when it starts and ends the block on the VoIP servers. Therefore, when creating a new block, the `started`, `started2`, `ended`, and `ended2` fields should be left empty, because the server will not process the events if there is already something in this field.
+The value given for `announce` defines the announcement played to the caller. For the values `orga` (please call again later) and `today` (please call again tomorrow) there are prepared audio files on the server.  The files `startTime` and `endTime` are values for which starting and ending the block has been planned/configured. While the system fills in the fields `started` (on yser)/`started2` (on volp) and `ended` (on yser)/`ended2` (on volp) automatically when it starts and ends the block on the VoIP servers. Therefore, when creating a new block, the `started`, `started2`, `ended`, and `ended2` fields should be left empty, because the server will not process the events if there is already something in this field.
 
 ### Parameters
 
@@ -132,8 +126,6 @@ Name | Type | Description  | Required | Notes
 ## put_block_by_id
 
 > models::Block put_block_by_id(id, new_block)
-Update an existing block
-
 Update an existing block
 
 ### Parameters

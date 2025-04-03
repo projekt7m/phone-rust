@@ -12,7 +12,13 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct NewQueueOpening {
+pub struct ListWrapperQueueOpeningDataInner {
+    #[serde(rename = "queueOpeningId")]
+    pub queue_opening_id: uuid::Uuid,
+    #[serde(rename = "tenantId")]
+    pub tenant_id: uuid::Uuid,
+    #[serde(rename = "queueId")]
+    pub queue_id: uuid::Uuid,
     #[serde(rename = "weekday")]
     pub weekday: models::WeekdayHoliday,
     #[serde(rename = "startTime")]
@@ -21,9 +27,12 @@ pub struct NewQueueOpening {
     pub end_time: String,
 }
 
-impl NewQueueOpening {
-    pub fn new(weekday: models::WeekdayHoliday, start_time: String, end_time: String) -> NewQueueOpening {
-        NewQueueOpening {
+impl ListWrapperQueueOpeningDataInner {
+    pub fn new(queue_opening_id: uuid::Uuid, tenant_id: uuid::Uuid, queue_id: uuid::Uuid, weekday: models::WeekdayHoliday, start_time: String, end_time: String) -> ListWrapperQueueOpeningDataInner {
+        ListWrapperQueueOpeningDataInner {
+            queue_opening_id,
+            tenant_id,
+            queue_id,
             weekday,
             start_time,
             end_time,

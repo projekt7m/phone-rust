@@ -12,24 +12,24 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct LegacyQueue {
-    #[serde(rename = "queue_id")]
-    pub queue_id: uuid::Uuid,
-    #[serde(rename = "tenant_id")]
+pub struct NumberConfiguration {
+    #[serde(rename = "numberConfigurationId")]
+    pub number_configuration_id: uuid::Uuid,
+    #[serde(rename = "tenantId")]
     pub tenant_id: uuid::Uuid,
-    #[serde(rename = "queue")]
-    pub queue: String,
-    #[serde(rename = "name")]
-    pub name: String,
+    #[serde(rename = "number")]
+    pub number: String,
+    #[serde(rename = "lastChange")]
+    pub last_change: String,
 }
 
-impl LegacyQueue {
-    pub fn new(queue_id: uuid::Uuid, tenant_id: uuid::Uuid, queue: String, name: String) -> LegacyQueue {
-        LegacyQueue {
-            queue_id,
+impl NumberConfiguration {
+    pub fn new(number_configuration_id: uuid::Uuid, tenant_id: uuid::Uuid, number: String, last_change: String) -> NumberConfiguration {
+        NumberConfiguration {
+            number_configuration_id,
             tenant_id,
-            queue,
-            name,
+            number,
+            last_change,
         }
     }
 }

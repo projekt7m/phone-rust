@@ -12,7 +12,7 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct AlarmCall {
+pub struct ListWrapperAlarmCallDataInner {
     #[serde(rename = "alarmCallId")]
     pub alarm_call_id: uuid::Uuid,
     #[serde(rename = "tenantId")]
@@ -41,9 +41,9 @@ pub struct AlarmCall {
     pub last_change: String,
 }
 
-impl AlarmCall {
-    pub fn new(alarm_call_id: uuid::Uuid, tenant_id: uuid::Uuid, alarm_id: uuid::Uuid, callee: String, call_state: models::AlarmCallState, call_text: String, call_text_id: uuid::Uuid, callback_text: String, callback_text_id: uuid::Uuid, call_accepted_digits: String, callback_accepted_digits: String, pressed_digit: String, last_change: String) -> AlarmCall {
-        AlarmCall {
+impl ListWrapperAlarmCallDataInner {
+    pub fn new(alarm_call_id: uuid::Uuid, tenant_id: uuid::Uuid, alarm_id: uuid::Uuid, callee: String, call_state: models::AlarmCallState, call_text: String, call_text_id: uuid::Uuid, callback_text: String, callback_text_id: uuid::Uuid, call_accepted_digits: String, callback_accepted_digits: String, pressed_digit: String, last_change: String) -> ListWrapperAlarmCallDataInner {
+        ListWrapperAlarmCallDataInner {
             alarm_call_id,
             tenant_id,
             alarm_id,

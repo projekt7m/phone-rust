@@ -12,21 +12,15 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct QueuePrio {
-    #[serde(rename = "prio")]
-    pub prio: i32,
-    #[serde(rename = "name")]
-    pub name: String,
-    #[serde(rename = "accessKey")]
-    pub access_key: String,
+pub struct NewNumberConfiguration {
+    #[serde(rename = "number")]
+    pub number: String,
 }
 
-impl QueuePrio {
-    pub fn new(prio: i32, name: String, access_key: String) -> QueuePrio {
-        QueuePrio {
-            prio,
-            name,
-            access_key,
+impl NewNumberConfiguration {
+    pub fn new(number: String) -> NewNumberConfiguration {
+        NewNumberConfiguration {
+            number,
         }
     }
 }
