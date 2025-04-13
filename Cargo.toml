@@ -1,6 +1,6 @@
 [package]
 name = "p7m-phone"
-version = "0.6.0"
+version = "0.6.1"
 authors = ["tech@p7m.de"]
 description = "API for managing phone services  This is the API of the service at P7M that manages phone services.  **Attention:** this API will probably still change a lot in the future, it's not at all stable yet"
 license = "Apache-2.0"

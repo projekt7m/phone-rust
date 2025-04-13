@@ -12,21 +12,27 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct NewQueueOpening {
-    #[serde(rename = "weekday")]
-    pub weekday: models::WeekdayHoliday,
+pub struct NewQueueCaller {
+    #[serde(rename = "queueNumberId")]
+    pub queue_number_id: uuid::Uuid,
+    #[serde(rename = "callerNumber")]
+    pub caller_number: String,
+    #[serde(rename = "prio")]
+    pub prio: i32,
+    #[serde(rename = "ringRequest")]
+    pub ring_request: bool,
     #[serde(rename = "startTime")]
     pub start_time: String,
-    #[serde(rename = "endTime")]
-    pub end_time: String,
 }
 
-impl NewQueueOpening {
-    pub fn new(weekday: models::WeekdayHoliday, start_time: String, end_time: String) -> NewQueueOpening {
-        NewQueueOpening {
-            weekday,
+impl NewQueueCaller {
+    pub fn new(queue_number_id: uuid::Uuid, caller_number: String, prio: i32, ring_request: bool, start_time: String) -> NewQueueCaller {
+        NewQueueCaller {
+            queue_number_id,
+            caller_number,
+            prio,
+            ring_request,
             start_time,
-            end_time,
         }
     }
 }
