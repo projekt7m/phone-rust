@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**delete_queue_queue_id_callers_queue_caller_id**](QueueApi.md#delete_queue_queue_id_callers_queue_caller_id) | **DELETE** /queues/{qid}/callers/{qcid} | Remove a caller from a queue
 [**delete_queues_queue_id_destinations_queue_number_id**](QueueApi.md#delete_queues_queue_id_destinations_queue_number_id) | **DELETE** /queues/{qid}/destinations/{qdid} | Delete a destination from a queue
 [**delete_queues_queue_id_numbers_queue_number_id**](QueueApi.md#delete_queues_queue_id_numbers_queue_number_id) | **DELETE** /queues/{qid}/numbers/{qnid} | Delete a number from a queue
+[**get_all_queues**](QueueApi.md#get_all_queues) | **GET** /queues/all | Get all queues
 [**get_queue_opening**](QueueApi.md#get_queue_opening) | **GET** /queues/{qid}/openings | Get the list of intervals where the waiting queue is opened
 [**get_queue_openings_id**](QueueApi.md#get_queue_openings_id) | **GET** /queues/{qid}/openings/{qoid} | Get an opening interval by its ID
 [**get_queue_queue_id_callers**](QueueApi.md#get_queue_queue_id_callers) | **GET** /queues/{qid}/callers | Get the list of callers in a waiting queue
@@ -141,6 +142,33 @@ Name | Type | Description  | Required | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_all_queues
+
+> Vec<models::Queue> get_all_queues()
+Get all queues
+
+This is only accessible by internal system services and super admins.  Result will not contain queue numbers, or destinations
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Vec<models::Queue>**](Queue.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

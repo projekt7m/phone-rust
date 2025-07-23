@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **state** | [**models::CallState**](CallState.md) |  | 
 **caller_id_num** | Option<**String**> |  | [optional]
 **caller_id_name** | Option<**String**> |  | [optional]
+**caller_id** | **String** |  | 
 **call_time** | **String** |  | 
 **wait_time** | **String** |  | 
 **talk_time** | Option<**String**> |  | [optional]
