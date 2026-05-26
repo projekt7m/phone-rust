@@ -117,5 +117,6 @@ pub mod internal_api;
 pub mod number_configuration_api;
 pub mod queue_api;
 pub mod status_api;
+pub mod voicemail_api;
 
 pub mod configuration;

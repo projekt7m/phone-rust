@@ -12,18 +12,21 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct AlarmCallUpdate {
-    #[serde(rename = "callState")]
-    pub call_state: models::AlarmCallState,
-    #[serde(rename = "pressedDigit")]
-    pub pressed_digit: String,
+pub struct NewVoicemail {
+    #[serde(rename = "caller")]
+    pub caller: String,
+    #[serde(rename = "topic")]
+    pub topic: String,
+    #[serde(rename = "message")]
+    pub message: String,
 }
 
-impl AlarmCallUpdate {
-    pub fn new(call_state: models::AlarmCallState, pressed_digit: String) -> AlarmCallUpdate {
-        AlarmCallUpdate {
-            call_state,
-            pressed_digit,
+impl NewVoicemail {
+    pub fn new(caller: String, topic: String, message: String) -> NewVoicemail {
+        NewVoicemail {
+            caller,
+            topic,
+            message,
         }
     }
 }
