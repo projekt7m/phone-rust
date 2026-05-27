@@ -21,6 +21,8 @@ docs/ListWrapperQueueCaller.md
 docs/ListWrapperQueueCallerDataInner.md
 docs/ListWrapperQueueOpening.md
 docs/ListWrapperQueueOpeningDataInner.md
+docs/ListWrapperVoicemail.md
+docs/ListWrapperVoicemailDataInner.md
 docs/NewAlarmCall.md
 docs/NewBlock.md
 docs/NewNumberConfiguration.md
@@ -72,6 +74,8 @@ src/models/list_wrapper_queue_caller.rs
 src/models/list_wrapper_queue_caller_data_inner.rs
 src/models/list_wrapper_queue_opening.rs
 src/models/list_wrapper_queue_opening_data_inner.rs
+src/models/list_wrapper_voicemail.rs
+src/models/list_wrapper_voicemail_data_inner.rs
 src/models/mod.rs
 src/models/new_alarm_call.rs
 src/models/new_block.rs

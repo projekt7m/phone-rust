@@ -12,18 +12,15 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct CodeCallRequest {
-    #[serde(rename = "code")]
-    pub code: String,
-    #[serde(rename = "phone")]
-    pub phone: String,
+pub struct ListWrapperVoicemail {
+    #[serde(rename = "data")]
+    pub data: Vec<models::ListWrapperVoicemailDataInner>,
 }
 
-impl CodeCallRequest {
-    pub fn new(code: String, phone: String) -> CodeCallRequest {
-        CodeCallRequest {
-            code,
-            phone,
+impl ListWrapperVoicemail {
+    pub fn new(data: Vec<models::ListWrapperVoicemailDataInner>) -> ListWrapperVoicemail {
+        ListWrapperVoicemail {
+            data,
         }
     }
 }

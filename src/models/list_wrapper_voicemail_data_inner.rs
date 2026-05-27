@@ -12,7 +12,7 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct Voicemail {
+pub struct ListWrapperVoicemailDataInner {
     #[serde(rename = "voicemail_id")]
     pub voicemail_id: uuid::Uuid,
     #[serde(rename = "tenant_id")]
@@ -31,9 +31,9 @@ pub struct Voicemail {
     pub last_change: String,
 }
 
-impl Voicemail {
-    pub fn new(voicemail_id: uuid::Uuid, tenant_id: uuid::Uuid, queue_id: uuid::Uuid, caller: String, topic: String, message: String, timestamp: String, last_change: String) -> Voicemail {
-        Voicemail {
+impl ListWrapperVoicemailDataInner {
+    pub fn new(voicemail_id: uuid::Uuid, tenant_id: uuid::Uuid, queue_id: uuid::Uuid, caller: String, topic: String, message: String, timestamp: String, last_change: String) -> ListWrapperVoicemailDataInner {
+        ListWrapperVoicemailDataInner {
             voicemail_id,
             tenant_id,
             queue_id,

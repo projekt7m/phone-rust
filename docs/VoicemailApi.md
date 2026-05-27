@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## get_voicemail_qid
 
-> Vec<models::Voicemail> get_voicemail_qid(qid)
+> models::ListWrapperVoicemail get_voicemail_qid(qid)
 Get the list of all voicemails of a queue
 
 ### Parameters
@@ -24,7 +24,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<models::Voicemail>**](Voicemail.md)
+[**models::ListWrapperVoicemail**](ListWrapper_Voicemail.md)
 
 ### Authorization
 
