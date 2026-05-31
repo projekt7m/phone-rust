@@ -33,6 +33,7 @@ docs/NewQueueOpening.md
 docs/NewVoicemail.md
 docs/NumberConfiguration.md
 docs/NumberConfigurationApi.md
+docs/PhoneNumber.md
 docs/Queue.md
 docs/QueueApi.md
 docs/QueueCall.md
@@ -86,6 +87,7 @@ src/models/new_queue_number.rs
 src/models/new_queue_opening.rs
 src/models/new_voicemail.rs
 src/models/number_configuration.rs
+src/models/phone_number.rs
 src/models/queue.rs
 src/models/queue_call.rs
 src/models/queue_caller.rs

@@ -52,6 +52,8 @@ pub mod new_voicemail;
 pub use self::new_voicemail::NewVoicemail;
 pub mod number_configuration;
 pub use self::number_configuration::NumberConfiguration;
+pub mod phone_number;
+pub use self::phone_number::PhoneNumber;
 pub mod queue;
 pub use self::queue::Queue;
 pub mod queue_call;

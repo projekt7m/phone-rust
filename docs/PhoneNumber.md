@@ -1,16 +1,13 @@
-# NewVoicemail
+# PhoneNumber
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**caller** | **String** |  | 
-**topic** | **String** |  | 
-**message** | **String** |  | 
-**channel** | **String** |  | 
-**language** | **String** |  | 
-**audio_filename** | **String** |  | 
-**audio_s3_path** | **String** |  | 
+**e164** | **String** |  | 
+**international** | **String** |  | 
+**national** | **String** |  | 
+**country_code** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

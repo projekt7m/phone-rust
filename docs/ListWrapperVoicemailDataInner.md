@@ -8,8 +8,15 @@ Name | Type | Description | Notes
 **tenant_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
 **queue_id** | [**uuid::Uuid**](uuid::Uuid.md) |  | 
 **caller** | **String** |  | 
+**caller_phone_number** | Option<[**models::PhoneNumber**](PhoneNumber.md)> |  | [optional]
 **topic** | **String** |  | 
 **message** | **String** |  | 
+**done_at** | Option<**String**> |  | [optional]
+**done_by** | Option<[**uuid::Uuid**](uuid::Uuid.md)> |  | [optional]
+**language** | **String** |  | 
+**audio_filename** | **String** |  | 
+**signed_url** | **String** |  | 
+**url_valid_to** | Option<**String**> |  | [optional]
 **timestamp** | **String** |  | 
 **last_change** | **String** |  | 
 
