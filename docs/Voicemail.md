@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **done_by** | Option<[**uuid::Uuid**](uuid::Uuid.md)> |  | [optional]
 **language** | **String** |  | 
 **audio_filename** | **String** |  | 
+**duration** | Option<**i32**> |  | [optional]
 **signed_url** | **String** |  | 
 **url_valid_to** | Option<**String**> |  | [optional]
 **timestamp** | **String** |  | 

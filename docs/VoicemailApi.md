@@ -72,7 +72,7 @@ Name | Type | Description  | Required | Notes
 
 ## post_voicemail_qid
 
-> Vec<models::Voicemail> post_voicemail_qid(qid, new_voicemail)
+> models::Voicemail post_voicemail_qid(qid, new_voicemail)
 Create a new voicemail message
 
 ### Parameters
@@ -85,7 +85,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**Vec<models::Voicemail>**](Voicemail.md)
+[**models::Voicemail**](Voicemail.md)
 
 ### Authorization
 

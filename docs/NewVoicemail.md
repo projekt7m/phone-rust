@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **language** | **String** |  | 
 **audio_filename** | **String** |  | 
 **audio_s3_path** | **String** |  | 
+**duration** | Option<**i32**> |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
